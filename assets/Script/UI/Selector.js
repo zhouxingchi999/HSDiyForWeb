@@ -25,7 +25,7 @@ cc.Class({
         }
     },
     showItems: function(){
-        this.bars.x = 18;
+        this.bars.x = -4;
     },
     close: function(){
         this.bars.x = 1000;
@@ -36,18 +36,18 @@ cc.Class({
         var srcSp = cc.find("Mask/pic", node).getComponent(cc.Sprite)
         
         if(node.name =="minion") {
-            this.mainPic.node.position = cc.v2(31,-100)
-            this.mainPic.node.rotation = 0;
+            //this.mainPic.node.position = cc.v2(31,-100)
+            //this.mainPic.node.rotation = 0;
             this.text.string = "随从"
         }
         if(node.name =="spell") {
-            this.mainPic.node.position = cc.v2(64.5,7)
-            this.mainPic.node.rotation = 33;
+            //this.mainPic.node.position = cc.v2(64.5,7)
+            //this.mainPic.node.rotation = 33;
             this.text.string = "法术"
         }
         if(node.name =="weapon") {
-            this.mainPic.node.position = cc.v2(6,57)
-            this.mainPic.node.rotation = 0;
+            //this.mainPic.node.position = cc.v2(6,57)
+            //this.mainPic.node.rotation = 0;
             this.text.string = "武器"
         }
         this.mainPic.spriteFrame = srcSp.spriteFrame;
