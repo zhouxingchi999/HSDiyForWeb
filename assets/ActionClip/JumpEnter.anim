@@ -1,0 +1,54 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "JumpEnter",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.3333333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "leaf": {
+        "props": {
+          "opacity": []
+        }
+      }
+    },
+    "props": {
+      "scaleX": [
+        {
+          "frame": 0,
+          "value": 0.1,
+          "curve": [
+            1.04,
+            0.74,
+            0.32,
+            1.4
+          ]
+        },
+        {
+          "frame": 0.3333333333333333,
+          "value": 1
+        }
+      ],
+      "scaleY": [
+        {
+          "frame": 0,
+          "value": 0.1,
+          "curve": [
+            0.91,
+            0.53,
+            0.39,
+            1.42
+          ]
+        },
+        {
+          "frame": 0.3333333333333333,
+          "value": 1
+        }
+      ]
+    }
+  },
+  "events": []
+}

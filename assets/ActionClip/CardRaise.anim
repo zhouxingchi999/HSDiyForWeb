@@ -1,0 +1,67 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "New AnimationClip",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.6,
+  "sample": 60,
+  "speed": 0.7,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "skewY": [
+        {
+          "frame": 0,
+          "value": 1,
+          "curve": "expoOut"
+        },
+        {
+          "frame": 0.3333333333333333,
+          "value": 10,
+          "curve": "circIn"
+        },
+        {
+          "frame": 0.6,
+          "value": 1
+        }
+      ],
+      "scaleX": [
+        {
+          "frame": 0,
+          "value": 1,
+          "curve": "sineOut"
+        },
+        {
+          "frame": 0.3333333333333333,
+          "value": 0.8,
+          "curve": "circIn"
+        },
+        {
+          "frame": 0.6,
+          "value": 1
+        }
+      ],
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            284,
+            383
+          ],
+          "curve": "quartIn"
+        },
+        {
+          "frame": 0.6,
+          "value": [
+            284,
+            450
+          ]
+        }
+      ]
+    },
+    "comps": {
+      "cc.Sprite": {}
+    }
+  },
+  "events": []
+}

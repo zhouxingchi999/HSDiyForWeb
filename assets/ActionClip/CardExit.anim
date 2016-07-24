@@ -1,0 +1,51 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "CardExit",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.3333333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "y": [
+        {
+          "frame": 0,
+          "value": 451,
+          "curve": [
+            1.02,
+            0,
+            0.42,
+            1.64
+          ]
+        },
+        {
+          "frame": 1,
+          "value": 560
+        },
+        {
+          "frame": 1.3333333333333333,
+          "value": 560
+        }
+      ],
+      "x": [
+        {
+          "frame": 1,
+          "value": 219,
+          "curve": [
+            0.41,
+            -0.27,
+            0.96,
+            -0.24
+          ]
+        },
+        {
+          "frame": 1.3333333333333333,
+          "value": -600
+        }
+      ]
+    }
+  },
+  "events": []
+}
