@@ -22,6 +22,10 @@ cc.Class({
         Mask:{
             default:null,
             type:cc.Node
+        },
+        messageBox:{
+            default: null,
+            type: cc.Node
         }
     },
     changeCardClass: function(event){
@@ -52,7 +56,8 @@ cc.Class({
         var waterMark = cardControl.waterMark;
         var WMS = this.WMSelector.getComponent("WMSelector");
 
-        var wName = cardControl.cardType.EN+"w_"+WMS.ExNameStr.EN[WMS.cur];
+        var wName = cardControl.cardTypeStr[cardControl.typeID].EN+"w_"+WMS.ExNameStr.EN[WMS.cur];
+        waterMark.name = "w_"+WMS.ExNameStr.EN[WMS.cur];
         cc.loader.loadRes("water", cc.SpriteAtlas, function (err, SpriteAtlas) {
             //cc.log("SpriteAtlas:", SpriteAtlas)
             //cc.log(spName,spr);
@@ -69,17 +74,40 @@ cc.Class({
        WMS.open();
        CCS.releaseControl(this)
     },
+    openMessage: function (event) {
+       var node = event.target; 
+       this.Mask.opacity = 128;
+       this.curUI = this.messageBox;
+       var MSG = this.messageBox.getComponent("MessageBox");
+       var CCS = this.card.getComponent("cardControl");
+
+       switch (node.name){
+           case "Info": MSG.string = "首发 炉石diy吧\n 素材提供:@J0000KER @芬里厄的安魂曲 @太阳很茫\n 制作人:@醉酒逝流年";
+                        break;
+           case "WebWarn": MSG.string = "网络状况差的情况下,部分资源加载可能会较慢，请多刷新几次\n 由于本程序使用的游戏引擎尚在开发阶段，可能会出现各种意想不到的情况，一般来说，都能刷新解决";
+                        break;
+           default: break;
+       }
+
+       MSG.open();
+       CCS.releaseControl(this)
+    },
     close: function () {
         this.Mask.opacity = 0;
+        
         switch (this.curUI){
             case this.WMSelector: 
                 var WMS = this.WMSelector.getComponent("WMSelector");
                 WMS.close();break;
+            case this.messageBox:
+                var MSG = this.messageBox.getComponent("MessageBox");
+                MSG.close();break;
             default: break;
         }
     },
     // use this for initialization
     onLoad: function () {
+        this.openMessage({target:{name:"WebWarn"}})
         //cc._canvas.style.cursor = 'pointer'
     },
 

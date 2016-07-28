@@ -11,13 +11,31 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        classID:{
-            default:0,
-            type: cc.Integer,
-            range:[0,11]
+        string:{
+            default:"没有合适的消息",
+            multiline: true,
+            notify:function(){
+              this.massage.string = this.string;
+            }
+        },
+        massage:{
+            default:null,
+            type:cc.Label
         }
     },
-
+    close:function () {
+        var anim = this.getComponent(cc.Animation);
+        anim.play("JumpExit");
+    },
+    open:function () {
+        var anim = this.getComponent(cc.Animation);
+        anim.play("JumpEnter");
+        this.node.x = -328;
+    },
+    closeAniCall:function(){
+        this.node.x = -1343;
+    }
+    ,
     // use this for initialization
     onLoad: function () {
 

@@ -69,14 +69,28 @@ cc.Class({
             var oy = 0
            
             var posX = this.padding*(start+i)+posXs[i]-wid/2
-            var posY = a*Math.sin(b*(posX+ox))+oy
-                        
+            var posY ;
+            var k;
+            
+            if(this.cardType == 0){
+                posY = a*Math.sin(b*(posX+ox))+oy
+                k = a*b*Math.cos(b*(posX+ox))    
+            }
+            if(this.cardType == 1){
+                posY = - 32/30000 * posX * posX;
+                k = - 64/30000 * posX;
+            }
+
+            if(this.cardType == 2){
+                posY = 0;
+                k=0;
+            }
+
             name.setPositionX(posX)
             name.setPositionY(posY)
-            
-            var k = a*b*Math.cos(b*(posX+ox))
+             
             var rotation = -180/Math.PI*Math.atan(k)
-            
+
             name.setRotation(rotation)
             
             this.node.addChild(name);
@@ -86,6 +100,7 @@ cc.Class({
     ,
     // use this for initialization
     onLoad: function () {
+        this.cardType = 0;
         this.updateString()
     },
 

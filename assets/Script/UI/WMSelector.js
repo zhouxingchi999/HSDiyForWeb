@@ -32,6 +32,7 @@ cc.Class({
         cc.loader.loadRes("water", cc.SpriteAtlas, function (err, SpriteAtlas) {
             //cc.log("SpriteAtlas:", SpriteAtlas)
             //cc.log(spName,spr);
+            
             spr.spriteFrame = SpriteAtlas.getSpriteFrame(spName);
         })
     },

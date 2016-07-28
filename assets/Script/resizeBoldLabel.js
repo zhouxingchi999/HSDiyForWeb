@@ -200,6 +200,11 @@ cc.Class({
            // cc.log(typeof char)
             char.setPosition(boldWords[i])
             
+            if(this.color != null){
+                char.color = this.color;
+                char.getComponent(cc.LabelOutline).color = this.color;
+            }
+
             this.node.addChild(char);
             
         }
