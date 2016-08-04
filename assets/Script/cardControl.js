@@ -520,7 +520,9 @@ cc.Class({
         //     this.race.node.opacity = 255
         // },this)
         // ))
-        
+        var cursorPath = cc.url.raw("hand.png")
+        cc.log(cursorPath)
+        cc._canvas.style.cursor = "D:/hand.png"
         cc.log(this.classID)
         cc.log("RenderTexture:",cc.RenderTexture)
     },  

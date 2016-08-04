@@ -22,7 +22,7 @@ cc.Class({
     },
     changeIcon: function (a) {
         this.cur = (this.cur+a);
-        this.cur = this.cur<0?this.cur+10:(this.cur>9?this.cur-10:this.cur)
+        this.cur = this.cur<0?this.cur+11:(this.cur>10?this.cur-11:this.cur)
         cc.log(this.cur)
         
         this.ExName.getComponent("LabelProxy").string = this.ExNameStr.CN[this.cur];
@@ -60,8 +60,8 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this.ExNameStr = {
-            EN:["PRO","NAXX","GVG","BRM","TGT","LOE","WOG","TOC","HOT","Xicon"],
-            CN:["专家级","纳克萨玛斯","地精大战侏儒","黑石山的火焰","冠军的试炼","探险者协会","上古之神的低语","∞","@芬里厄的安魂曲","无水印"]
+            EN:["PRO","NAXX","GVG","BRM","TGT","LOE","WOG","KLZ","TOC","HOT","Xicon"],
+            CN:["专家级","纳克萨玛斯","地精大战侏儒","黑石山的火焰","冠军的试炼","探险者协会","上古之神的低语","卡拉赞之夜","∞","@芬里厄的安魂曲","无水印"]
         }
         this.cur = 0;
     },
